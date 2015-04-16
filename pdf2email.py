@@ -1,5 +1,7 @@
 """
 pdf2email.py: extracts all email addresses from pdf files.
+
+pdfminer package required: pip install pdfminer.
 """
 
 from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
