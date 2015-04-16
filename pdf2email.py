@@ -46,13 +46,13 @@ def get_pdf_data(file_path):
     codec = 'utf-8'
     laparams = LAParams()
     device = TextConverter(rsrcmgr, retstr, codec=codec, laparams=laparams)
-    file_data = file(file_path, 'rb')
-    interpreter = PDFPageInterpreter(rsrcmgr, device)
     password = ''
     maxpages = 0
     caching = True
     pagenos = set()
     try:
+        file_data = file(file_path, 'rb')
+        interpreter = PDFPageInterpreter(rsrcmgr, device)
         for file_page in PDFPage.get_pages(file_data, pagenos, 
                                            maxpages=maxpages, 
                                            password=password, 
